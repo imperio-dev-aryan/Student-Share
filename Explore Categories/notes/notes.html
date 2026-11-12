@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes | StudentShare</title>
+
+    <link rel="stylesheet" href="notes.css">
+    <link rel="icon" type="image.PNG" href="/Designer (2).png">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <!-- Sidebar Toggle -->
+        <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidebar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Website Branding -->
+        <a href="/index.html" class="brand">
+            <i class="fa-solid fa-book-open logo-icon"></i>
+
+            <div class="brand-text">
+                <h1>Student<span>Share</span></h1>
+                <p>Resources <b>·</b> Exchange <b>·</b> Grow</p>
+            </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="search-bar" id="searchForm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search for books, notes, subjects, or resources..."
+                aria-label="Search academic resources"
+            >
+
+            <button type="submit" aria-label="Submit search">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <!-- User Controls -->
+        <div class="user-controls">
+
+            <button class="notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot"></span>
+            </button>
+
+            <button class="profile-btn" id="profileBtn"
+                    aria-expanded="false">
+                <span class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span class="profile-name">Student</span>
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu" hidden>
+                <a href="#"><i class="fa-regular fa-user"></i> My Profile</a>
+                <a href="#"><i class="fa-solid fa-book"></i> My Resources</a>
+                <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            </div>
+
+        </div>
+    </header>
+
+ 
+
+<!-- Navigation Sidebar -->
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+
+    <div class="sidebar-background"></div>
+
+    <div class="sidebar-content">
+
+        <div class="sidebar-top">
+            <span class="sidebar-label">NAVIGATION</span>
+
+            <button class="sidebar-close" id="sidebarClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/index.html" class="sidebar-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#categories" class="sidebar-link">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Explore Categories</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">RESOURCES</span>
+
+            <a href="/Explore Categories/books/books.html" class="sidebar-link">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Books</span>
+            </a>
+
+            <a href="/Explore Categories/notes/notes.html" class="sidebar-link active">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Notes</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/page.html" class="sidebar-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Study Guides, Lab Manuals, Subjects</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/manuals.html" class="sidebar-link">
+                <i class="fa-solid fa-flask"></i>
+                <span>Other Resources</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/subjects.html" class="sidebar-link">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Projects</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">COMMUNITY</span>
+
+            <a href="#popular-resources" class="sidebar-link">
+                <i class="fa-solid fa-fire"></i>
+                <span>Popular Resources</span>
+            </a>
+
+            <a href="#physical-exchange" class="sidebar-link">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Exchange Resources</span>
+            </a>
+
+            <a href="#community" class="sidebar-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-book-open"></i>
+
+            <div>
+                <h3>Student<span>Share</span></h3>
+                <p>Resources · Exchange · Grow</p>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+
+<!-- NOTES PAGE HEADING -->
+
+<section class="notes-page-header">
+
+    <div class="notes-heading-main">
+
+        <div class="notes-heading-icon">
+            <i class="fa-regular fa-file-lines"></i>
+        </div>
+
+        <div class="notes-heading-text">
+            <h1>Notes</h1>
+            <p>Class Notes &amp; Summaries</p>
+        </div>
+
+    </div>
+
+    <nav class="notes-breadcrumb" aria-label="Breadcrumb">
+
+        <a href="/index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <span>Notes</span>
+
+    </nav>
+
+</section>
+
+
+
+<!-- ========================================
+     NOTES MAIN CONTENT
+======================================== -->
+
+<main class="notes-main-layout">
+
+    
+<!-- ========================================
+     NOTES FILTER SIDEBAR
+======================================== -->
+
+<aside class="notes-filter-sidebar" id="notesFilters">
+
+    <!-- Search -->
+    <div class="notes-filter-group">
+
+        <h3 class="notes-filter-heading">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search within notes
+        </h3>
+
+        <input
+            type="search"
+            class="notes-filter-search"
+            id="notesSearch"
+            placeholder="Keywords in notes..."
+            aria-label="Search within notes"
+        >
+
+    </div>
+
+
+    <!-- Department -->
+    <div class="notes-filter-group">
+
+        <h3 class="notes-filter-heading">Department</h3>
+
+        <select class="notes-filter-select" id="notesDepartment">
+
+            <option value="all">All Departments</option>
+            <option value="computer-science">Computer Science</option>
+            <option value="mechanical">Mechanical Engineering</option>
+            <option value="electrical">Electrical Engineering</option>
+            <option value="civil">Civil Engineering</option>
+            <option value="management">Management</option>
+            <option value="physics">Physics</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Subject Tags -->
+    <div class="notes-filter-group">
+
+        <h3 class="notes-filter-heading">Subject Tags</h3>
+
+        <div class="notes-subject-tags" id="notesSubjectTags">
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Data Structures" aria-pressed="false">
+                Data Structures
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Python" aria-pressed="false">
+                Python
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="DBMS" aria-pressed="false">
+                DBMS
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Physics" aria-pressed="false">
+                Physics
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Algorithms" aria-pressed="false">
+                Algorithms
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Operating Systems" aria-pressed="false">
+                Operating Systems
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Calculus" aria-pressed="false">
+                Calculus
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Linear Algebra" aria-pressed="false">
+                Linear Algebra
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Computer Networks" aria-pressed="false">
+                Computer Networks
+            </button>
+
+            <button type="button" class="notes-subject-tag"
+                data-subject="Digital Electronics" aria-pressed="false">
+                Digital Electronics
+            </button>
+
+            <button type="button" class="notes-subject-tag extra-note-tag"
+                data-subject="Machine Learning"
+                aria-pressed="false" hidden>
+                Machine Learning
+            </button>
+
+            <button type="button" class="notes-subject-tag extra-note-tag"
+                data-subject="Java"
+                aria-pressed="false" hidden>
+                Java
+            </button>
+
+            <button type="button" class="notes-subject-tag extra-note-tag"
+                data-subject="Chemistry"
+                aria-pressed="false" hidden>
+                Chemistry
+            </button>
+
+        </div>
+
+        <button type="button" class="notes-show-more"
+            id="notesShowMore" aria-expanded="false">
+
+            <i class="fa-solid fa-plus"></i>
+            Show more
+
+        </button>
+
+    </div>
+
+
+    <!-- Semester -->
+    <div class="notes-filter-group">
+
+        <h3 class="notes-filter-heading">Semester</h3>
+
+        <select class="notes-filter-select" id="notesSemester">
+
+            <option value="all">All Semesters</option>
+            <option value="1">1st Semester</option>
+            <option value="2">2nd Semester</option>
+            <option value="3">3rd Semester</option>
+            <option value="4">4th Semester</option>
+            <option value="5">5th Semester</option>
+            <option value="6">6th Semester</option>
+            <option value="7">7th Semester</option>
+            <option value="8">8th Semester</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Type -->
+    <div class="notes-filter-group">
+
+        <h3 class="notes-filter-heading">Type</h3>
+
+        <div class="notes-type-options">
+
+            <button type="button" id="free"
+                class="notes-type-btn"
+                data-type="free"
+                aria-pressed="false">
+
+                <i class="fa-solid fa-file-lines"></i>
+                Free
+
+            </button>
+
+            <button type="button"
+                class="notes-type-btn"
+                data-type="exchange"
+                aria-pressed="false">
+
+                <i class="fa-solid fa-arrows-rotate"></i>
+                Exchange
+
+            </button>
+
+        </div>
+
+    </div>
+
+     <div id="reset"><div>Reset Filter</div></div>
+
+</aside>
+
+
+
+    <!-- NOTES LISTINGS WILL BE ADDED NEXT -->
+    <section class="notes-content">
+        <div class="results-header">
+            <p><span id="notesCount">8</span> notes available</p>
+            <select id="sortNotes" class="sort-select" aria-label="Sort notes">
+                <option value="popular">Most Popular</option>
+                <option value="rating">Highest Rated</option>
+                <option value="title">Title: A to Z</option>
+            </select>
+        </div>
+
+        <div class="notes-grid" id="notesGrid">
+
+            <article class="note-card"
+                data-title="Python Complete Notes"
+                data-subject="python"
+                data-department="computer-science"
+                data-semester="2" data-type="free"
+                data-rating="4.8" data-reviews="124" data-popularity="124">
+
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/python.jpeg" 
+                        alt="Python Complete Notes">
+               </div>
+
+                <div class="note-details">
+                    <h3>Python Complete Notes</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.8</span><small>(124)</small></div>
+                    <div class="note-footer"><span class="status free-status">Free</span></div>
+                </div>
+            </article>
+
+            <article class="note-card"
+                data-title="DBMS Important Questions"
+                data-subject="dbms"
+                data-department="computer-science"
+                data-semester="4" data-type="free"
+                data-rating="4.7" data-reviews="98" data-popularity="98">
+                
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/dbms.jpeg" 
+                        alt="DBMS Important Questions">
+               </div>
+
+                <div class="note-details">
+                    <h3>DBMS Important Questions</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.7</span><small>(98)</small></div>
+                    <div class="note-footer"><span class="status free-status">Free</span></div>
+                </div>
+            </article>
+
+            <article class="note-card"
+                data-title="Calculus Handwritten Notes"
+                data-subject="calculus"
+                data-department="engineering"
+                data-semester="1" data-type="free"
+                data-rating="4.9" data-reviews="156" data-popularity="156">
+                
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/calculas.jpeg" 
+                        alt="Calculus Handwritten Notes">
+               </div>
+
+                <div class="note-details">
+                    <h3>Calculus Handwritten Notes</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.9</span><small>(156)</small></div>
+                    <div class="note-footer"><span class="status free-status">Free</span></div>
+                </div>
+            </article>
+
+            <article class="note-card"
+                data-title="Operating Systems Notes"
+                data-subject="operating-systems"
+                data-department="computer-science"
+                data-semester="4" data-type="exchange"
+                data-rating="4.6" data-reviews="77" data-popularity="77">
+               
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/operating systems.jpeg" 
+                        alt="Operating Systems Notes">
+               </div>
+
+                <div class="note-details">
+                    <h3>Operating Systems Notes</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.6</span><small>(77)</small></div>
+                    <div class="note-footer"><span class="status exchange-status">Exchange</span></div>
+                </div>
+            </article>
+
+            <article class="note-card"
+                data-title="Data Structures Handwritten Notes"
+                data-subject="data-structures"
+                data-department="computer-science"
+                data-semester="3" data-type="free"
+                data-rating="4.8" data-reviews="102" data-popularity="102">
+                
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/data structures.jpeg" 
+                        alt="Data Structures Handwritten Notes">
+               </div>
+
+                <div class="note-details">
+                    <h3>Data Structures Handwritten Notes</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.8</span><small>(102)</small></div>
+                    <div class="note-footer"><span class="status free-status">Free</span></div>
+                </div>
+            </article>
+
+            <article class="note-card"
+                data-title="Physics Important Formulas"
+                data-subject="physics"
+                data-department="engineering"
+                data-semester="1" data-type="free"
+                data-rating="4.7" data-reviews="68" data-popularity="68">
+                
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/physics.jpeg" 
+                        alt="Physics Important Formulas">
+               </div>
+
+                <div class="note-details">
+                    <h3>Physics Important Formulas</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.7</span><small>(68)</small></div>
+                    <div class="note-footer"><span class="status free-status">Free</span></div>
+                </div>
+            </article>
+
+            <article class="note-card"
+                data-title="Computer Networks Notes"
+                data-subject="computer-networks"
+                data-department="information-technology"
+                data-semester="5" data-type="exchange"
+                data-rating="4.6" data-reviews="81" data-popularity="81">
+                
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/computer networks.jpeg" 
+                        alt="Computer Networks Notes">
+               </div>
+
+                <div class="note-details">
+                    <h3>Computer Networks Notes</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.6</span><small>(81)</small></div>
+                    <div class="note-footer"><span class="status exchange-status">Exchange</span></div>
+                </div>
+            </article>
+
+            <article class="note-card"
+                data-title="Digital Electronics Notes"
+                data-subject="digital-electronics"
+                data-department="electronics"
+                data-semester="2" data-type="exchange"
+                data-rating="4.5" data-reviews="59" data-popularity="59">
+                
+                <div class="notes-cover">
+                    <img src="/Explore Categories/notes/images/digital electronics.jpeg" 
+                        alt="Digital Electronics Notes">
+               </div>
+
+                <div class="note-details">
+                    <h3>Digital Electronics Notes</h3>
+                    <div class="note-rating"><span class="stars">★</span><span>4.5</span><small>(59)</small></div>
+                    <div class="note-footer"><span class="status exchange-status">Exchange</span></div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+
+
+
+<!-- ========================================
+     STUDENTSHARE FOOTER
+======================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+
+            <a href="#" class="footer-logo">
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>Student<span class="footer-gold">Share</span></span>
+            </a>
+
+            <p class="footer-tagline">
+                Empowering students to learn, share and grow together.
+            </p>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-copyright">
+                © 2026 StudentShare. All rights reserved.
+            </p>
+
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#about">Mission</a></li>
+                <li><a href="#community">Team</a></li>
+                <li><a href="#community">Careers</a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#categories">Resources</a></li>
+                <li><a href="#physical-exchange">Exchange</a></li>
+                <li><a href="#community">Grow</a></li>
+                <li><a href="#popular-resources">Popular Resources</a></li>
+            </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-column">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#papers">Previous Year Papers</a></li>
+                <li><a href="#guides">Study Guides</a></li>
+                <li><a href="#categories">View All</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#help">Help Center</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#guidelines">Community Guidelines</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <h3>Social Media</h3>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+
+                <a href="https://x.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span>X / Twitter</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer Line -->
+    <div class="footer-bottom">
+        <p>Made with <i class="fa-solid fa-heart"></i> for students, by students.</p>
+    </div>
+
+</footer>
+
+
+
+
+    <script src="/Explore Categories/header.js"></script>
+    <script src="notes.js"></script>
+
+</body>
+</html>

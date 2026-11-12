@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ABC Murders | CampusHub</title>
+    <link rel="icon" type="image.PNG" href="/Designer (2).png">
+    <link rel="stylesheet" href="abcmurders.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+        <!-- Sidebar Toggle -->
+        <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidebar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Website Branding -->
+        <a href="/index.html" class="brand">
+            <i class="fa-solid fa-book-open logo-icon"></i>
+
+            <div class="brand-text">
+                <h1>Student<span>Share</span></h1>
+                <p>Resources <b>·</b> Exchange <b>·</b> Grow</p>
+            </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="search-bar" id="searchForm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search for books, notes, subjects, or resources..."
+                aria-label="Search academic resources"
+            >
+
+            <button type="submit" aria-label="Submit search">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <!-- User Controls -->
+        <div class="user-controls">
+
+            <button class="notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot"></span>
+            </button>
+
+            <button class="profile-btn" id="profileBtn"
+                    aria-expanded="false">
+                <span class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span class="profile-name">Student</span>
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu" hidden>
+                <a href="#"><i class="fa-regular fa-user"></i> My Profile</a>
+                <a href="#"><i class="fa-solid fa-book"></i> My Resources</a>
+                <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            </div>
+
+        </div>
+    </header>
+
+ 
+
+<!-- Navigation Sidebar -->
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+
+    <div class="sidebar-background"></div>
+
+    <div class="sidebar-content">
+
+        <div class="sidebar-top">
+            <span class="sidebar-label">NAVIGATION</span>
+
+            <button class="sidebar-close" id="sidebarClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/index.html" class="sidebar-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#categories" class="sidebar-link">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Explore Categories</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">RESOURCES</span>
+
+            <a href="/Explore Categories/books/books.html" class="sidebar-link">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Books</span>
+            </a>
+
+            <a href="/Explore Categories/notes/notes.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Notes</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/page.html" class="sidebar-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Study Guides, Lab Manuals, Subjects</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/manuals.html" class="sidebar-link">
+                <i class="fa-solid fa-flask"></i>
+                <span>Other Resources</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/subjects.html" class="sidebar-link">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Projects</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">COMMUNITY</span>
+
+            <a href="#popular-resources" class="sidebar-link active">
+                <i class="fa-solid fa-fire"></i>
+                <span>Popular Resources</span>
+            </a>
+
+            <a href="#physical-exchange" class="sidebar-link">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Exchange Resources</span>
+            </a>
+
+            <a href="#community" class="sidebar-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-book-open"></i>
+
+            <div>
+                <h3>Student<span>Share</span></h3>
+                <p>Resources · Exchange · Grow</p>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+<main class="container">
+
+    <div class="breadcrumb">
+        Home / Resources / <span>The ABC Murders</span>
+    </div>
+
+    <section class="details">
+
+        <div class="image-section">
+            <div class="image-box">
+                <img src="/books/abc murder.jpeg"
+                     alt="The ABC Murders">
+            </div>
+        </div>
+
+        <div class="info-section">
+
+            <span class="category">PURCHASE</span>
+
+            <p class="subtitle">MYSTERY • CRIME FICTION</p>
+
+            <h1>The ABC Murders</h1>
+
+            <p class="author">Written by <span>Agatha Christie</span></p>
+
+            <div class="rating">
+                ★★★★★ <span>4.6 / 5.0</span>
+            </div>
+
+            <div class="price">₹250</div>
+
+            <p class="description">
+                The ABC Murders is a classic detective mystery novel
+                written by Agatha Christie. The story follows the
+                famous detective Hercule Poirot as he investigates
+                a series of mysterious murders connected by the
+                letters of the alphabet.
+            </p>
+
+            <div class="specifications">
+                <div><span>Author</span><strong>Agatha Christie</strong></div>
+                <div><span>Genre</span><strong>Mystery / Crime</strong></div>
+                <div><span>Format</span><strong>Paperback</strong></div>
+                <div><span>Availability</span><strong class="available">Available</strong></div>
+                <div><span>Category</span><strong>Purchase</strong></div>
+            </div>
+
+            <div class="actions">
+                <a href="#" class="buy-btn">Buy Now →</a>
+                <a href="products.html" class="back-btn">Continue Exploring</a>
+            </div>
+
+            <p class="note">Product listed on CampusHub marketplace.</p>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About This <span>Book</span></h2>
+        <p>
+            Follow Hercule Poirot as he attempts to solve a sequence
+            of crimes that appear to follow an alphabetical pattern.
+            This book is ideal for readers who enjoy suspense,
+            investigation and classic detective fiction.
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer compact-footer">
+
+    <div class="footer-main">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+
+            <a href="#" class="footer-logo">
+                <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+
+                <span>Student<span class="footer-gold">Share</span></span>
+            </a>
+
+            <p class="footer-tagline">
+                Empowering students to learn, share and grow together.
+            </p>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-copyright">
+                © 2026 StudentShare. All rights reserved.
+            </p>
+
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#about">Mission</a></li>
+                <li><a href="#community">Team</a></li>
+                <li><a href="#community">Careers</a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#categories">Resources</a></li>
+                <li><a href="#physical-exchange">Exchange</a></li>
+                <li><a href="#community">Grow</a></li>
+                <li><a href="#popular-resources">Popular Resources</a></li>
+            </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-column">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#papers">Previous Year Papers</a></li>
+                <li><a href="#guides">Study Guides</a></li>
+                <li><a href="#categories">View All</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#help">Help Center</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#guidelines">Community Guidelines</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <h3>Social Media</h3>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+
+                <a href="https://x.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span>X / Twitter</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>Made with <i class="fa-solid fa-heart"></i> for students, by students.</p>
+    </div>
+
+</footer>
+
+<script src="/Explore Categories/header.js"></script>
+</body>
+</html>

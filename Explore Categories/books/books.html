@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Books | StudentShare</title>
+
+    <link rel="icon" type="image.PNG" href="/Designer (2).png">
+    <link rel="stylesheet" href="books.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <!-- Sidebar Toggle -->
+        <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidebar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Website Branding -->
+        <a href="/index.html" class="brand">
+            <i class="fa-solid fa-book-open logo-icon"></i>
+
+            <div class="brand-text">
+                <h1>Student<span>Share</span></h1>
+                <p>Resources <b>·</b> Exchange <b>·</b> Grow</p>
+            </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="search-bar" id="searchForm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search for books, notes, subjects, or resources..."
+                aria-label="Search academic resources"
+            >
+
+            <button type="submit" aria-label="Submit search">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <!-- User Controls -->
+        <div class="user-controls">
+
+            <button class="notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot"></span>
+            </button>
+
+            <button class="profile-btn" id="profileBtn"
+                    aria-expanded="false">
+                <span class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span class="profile-name">Student</span>
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu" hidden>
+                <a href="#"><i class="fa-regular fa-user"></i> My Profile</a>
+                <a href="#"><i class="fa-solid fa-book"></i> My Resources</a>
+                <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            </div>
+
+        </div>
+    </header>
+
+ 
+
+<!-- Navigation Sidebar -->
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+
+    <div class="sidebar-background"></div>
+
+    <div class="sidebar-content">
+
+        <div class="sidebar-top">
+            <span class="sidebar-label">NAVIGATION</span>
+
+            <button class="sidebar-close" id="sidebarClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/index.html" class="sidebar-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#categories" class="sidebar-link">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Explore Categories</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">RESOURCES</span>
+
+            <a href="/Explore Categories/books/books.html" class="sidebar-link active">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Books</span>
+            </a>
+
+            <a href="/Explore Categories/notes/notes.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Notes</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/page.html" class="sidebar-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Study Guides, Lab Manuals, Subjects</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/manuals.html" class="sidebar-link">
+                <i class="fa-solid fa-flask"></i>
+                <span>Other Resources</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/subjects.html" class="sidebar-link">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Projects</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">COMMUNITY</span>
+
+            <a href="#popular-resources" class="sidebar-link">
+                <i class="fa-solid fa-fire"></i>
+                <span>Popular Resources</span>
+            </a>
+
+            <a href="#physical-exchange" class="sidebar-link">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Exchange Resources</span>
+            </a>
+
+            <a href="#community" class="sidebar-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-book-open"></i>
+
+            <div>
+                <h3>Student<span>Share</span></h3>
+                <p>Resources · Exchange · Grow</p>
+            </div>
+        </div>
+
+    </div>
+</aside>
+    <!-- Books page content will go here -->
+
+
+<!-- ========================================
+     BOOKS PAGE HEADING
+======================================== -->
+
+<section class="books-page-header">
+
+    <div class="books-heading-main">
+
+        <div class="books-heading-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <div class="books-heading-text">
+            <h1>Books</h1>
+            <p>Textbooks &amp; References</p>
+        </div>
+
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="books-breadcrumb" aria-label="Breadcrumb">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+
+        <i class="fa-solid fa-chevron-right breadcrumb-arrow"></i>
+
+        <span class="breadcrumb-current">Books</span>
+
+    </nav>
+
+</section>
+
+
+
+<!-- ========================================
+     BOOKS MAIN CONTENT
+======================================== -->
+
+<main class="books-main-layout">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="books-filter-sidebar" id="bookFilters">
+
+        <!-- Search -->
+        <div class="filter-group">
+
+            <h3 class="filter-heading">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search within books
+            </h3>
+
+            <input
+                type="search"
+                class="filter-search"
+                id="bookSearch"
+                placeholder="Keywords, title, author..."
+            >
+
+        </div>
+
+
+        <!-- Department -->
+        <div class="filter-group">
+
+            <h3 class="filter-heading">Department</h3>
+
+            <select class="filter-select" id="departmentFilter">
+                <option value="all">All Departments</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="mechanical">Mechanical Engineering</option>
+                <option value="electrical">Electrical Engineering</option>
+                <option value="civil">Civil Engineering</option>
+                <option value="management">Management</option>
+                <option value="physics">Physics</option>
+            </select>
+
+        </div>
+
+
+        <!-- Subject Tags -->
+        <div class="filter-group">
+
+            <h3 class="filter-heading">Subject Tags</h3>
+
+            <div class="subject-tags" id="subjectTags">
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Data Structures"
+                        aria-pressed="true">
+                    Data Structures
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Python"
+                        aria-pressed="false">
+                    Python
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="DBMS"
+                        aria-pressed="false">
+                    DBMS
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Physics"
+                        aria-pressed="false">
+                    Physics
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Algorithms"
+                        aria-pressed="false">
+                    Algorithms
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Operating Systems"
+                        aria-pressed="false">
+                    Operating Systems
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Mathematics"
+                        aria-pressed="false">
+                    Mathematics
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Machine Learning"
+                        aria-pressed="false">
+                    Machine Learning
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Electronics"
+                        aria-pressed="false">
+                    Electronics
+                </button>
+
+                <button class="subject-tag"
+                        type="button"
+                        data-subject="Chemistry"
+                        aria-pressed="false">
+                    Chemistry
+                </button>
+
+                <!-- Hidden additional tags -->
+                <button class="subject-tag extra-tag"
+                        type="button"
+                        data-subject="Computer Networks"
+                        aria-pressed="false"
+                        hidden>
+                    Computer Networks
+                </button>
+
+                <button class="subject-tag extra-tag"
+                        type="button"
+                        data-subject="Java"
+                        aria-pressed="false"
+                        hidden>
+                    Java
+                </button>
+
+                <button class="subject-tag extra-tag"
+                        type="button"
+                        data-subject="Electronics Engineering"
+                        aria-pressed="false"
+                        hidden>
+                    Electronics Engineering
+                </button>
+
+            </div>
+
+            <button class="show-more-btn" id="showMoreTags"
+                    type="button" aria-expanded="false">
+                <i class="fa-solid fa-plus"></i>
+                Show more
+            </button>
+
+        </div>
+
+
+        <!-- Semester -->
+        <div class="filter-group">
+
+            <h3 class="filter-heading">Semester</h3>
+
+            <select class="filter-select" id="semesterFilter">
+                <option value="all">All Semesters</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+            </select>
+
+        </div>
+
+
+        <!-- Resource Type -->
+        <div class="filter-group">
+
+            <h3 class="filter-heading">Type</h3>
+
+            <div class="type-options">
+
+                <button class="type-btn" id="free"
+                        type="button"
+                        data-type="free"
+                        aria-pressed="true">
+
+                    <i class="fa-solid fa-file-lines"></i>
+                    Free
+
+                </button>
+
+                <button class="type-btn"
+                        type="button"
+                        data-type="exchange"
+                        aria-pressed="false">
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    Exchange
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="reset"><div>Reset Filter</div></div>
+
+        
+
+    </aside>
+
+
+    <!-- BOOK GRID WILL BE ADDED HERE NEXT -->
+
+    <section class="books-results-area" id="booksResults">
+        
+<!-- ========================================
+     BOOK LISTINGS GRID
+======================================== -->
+
+<section class="books-results-area">
+
+    <div class="books-results-header">
+        <p><span id="booksCount">8</span> Books Available</p>
+
+        <select id="booksSort" class="books-sort">
+            <option value="popular">Most Popular</option>
+            <option value="newest">Newest First</option>
+            <option value="rating">Highest Rated</option>
+            <option value="title">Title: A to Z</option>
+        </select>
+    </div>
+
+    <div class="books-grid" id="booksGrid">
+
+        <!-- Book 1 -->
+        <article class="book-card"
+            data-title="Data Structures and Algorithms Made Easy"
+            data-author="Narasimha Karumanchi"
+            data-subject="Data Structures Algorithms"
+            data-department="computer-science"
+            data-semester="3"
+            data-type="free"
+            data-rating="4.8"
+            data-reviews="128"
+            data-date="2026-10-28"
+            data-popularity="128">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/images (3).jpg"
+                     alt="Data Structures and Algorithms Made Easy">
+            </div>
+
+            <div class="book-details">
+                <h3>Data Structures and Algorithms Made Easy</h3>
+                <p class="book-author">Narasimha Karumanchi</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.8</span>
+                    <span class="review-count">(128)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status free-status">
+                        <i class="fa-solid fa-gift"></i> Free
+                    </span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Book 2 -->
+        <article class="book-card"
+            data-title="Python Crash Course"
+            data-author="Eric Matthes"
+            data-subject="Python"
+            data-department="computer-science"
+            data-semester="2"
+            data-type="free"
+            data-rating="4.6"
+            data-reviews="96"
+            data-date="2026-10-25"
+            data-popularity="96">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/python.jpg"
+                     alt="Python Crash Course">
+            </div>
+
+            <div class="book-details">
+                <h3>Python Crash Course</h3>
+                <p class="book-author">Eric Matthes</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.6</span>
+                    <span class="review-count">(96)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status free-status">
+                        <i class="fa-solid fa-gift"></i> Free
+                    </span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Book 3 -->
+        <article class="book-card"
+            data-title="Database System Concepts"
+            data-author="Silberschatz"
+            data-subject="DBMS"
+            data-department="computer-science"
+            data-semester="4"
+            data-type="exchange"
+            data-rating="4.8"
+            data-reviews="74"
+            data-date="2026-10-20"
+            data-popularity="74">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/database.jpg"
+                     alt="Database System Concepts">
+            </div>
+
+            <div class="book-details">
+                <h3>Database System Concepts</h3>
+                <p class="book-author">Silberschatz</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.8</span>
+                    <span class="review-count">(74)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status exchange-status">
+                        <i class="fa-solid fa-arrows-rotate"></i> Exchange
+                    </span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Book 4 -->
+        <article class="book-card"
+            data-title="University Physics with Modern Physics"
+            data-author="Young and Freedman"
+            data-subject="Physics"
+            data-department="physics"
+            data-semester="2"
+            data-type="free"
+            data-rating="4.5"
+            data-reviews="61"
+            data-date="2026-10-18"
+            data-popularity="61">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/physics.jpg"
+                     alt="University Physics with Modern Physics">
+            </div>
+
+            <div class="book-details">
+                <h3>University Physics with Modern Physics</h3>
+                <p class="book-author">Young and Freedman</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.5</span>
+                    <span class="review-count">(61)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status free-status">
+                        <i class="fa-solid fa-gift"></i> Free
+                    </span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Book 5 -->
+        <article class="book-card"
+            data-title="Introduction to Algorithms"
+            data-author="Thomas H. Cormen"
+            data-subject="Algorithms"
+            data-department="computer-science"
+            data-semester="3"
+            data-type="exchange"
+            data-rating="4.7"
+            data-reviews="103"
+            data-date="2026-10-15"
+            data-popularity="103">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/intro_to_algo.jpg"
+                     alt="Introduction to Algorithms">
+            </div>
+
+            <div class="book-details">
+                <h3>Introduction to Algorithms</h3>
+                <p class="book-author">Thomas H. Cormen</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.7</span>
+                    <span class="review-count">(103)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status exchange-status">
+                        <i class="fa-solid fa-arrows-rotate"></i> Exchange
+                    </span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Book 6 -->
+        <article class="book-card"
+            data-title="Operating System Concepts"
+            data-author="Silberschatz, Galvin and Gagne"
+            data-subject="Operating Systems"
+            data-department="computer-science"
+            data-semester="4"
+            data-type="free"
+            data-rating="4.5"
+            data-reviews="82"
+            data-date="2026-10-12"
+            data-popularity="82">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/operating system.jpg"
+                     alt="Operating System Concepts">
+            </div>
+
+            <div class="book-details">
+                <h3>Operating System Concepts</h3>
+                <p class="book-author">Silberschatz, Galvin and Gagne</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.5</span>
+                    <span class="review-count">(82)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status free-status">
+                        <i class="fa-solid fa-gift"></i> Free
+                    </span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Book 7 -->
+        <article class="book-card"
+            data-title="Hands-On Machine Learning"
+            data-author="Aurelien Geron"
+            data-subject="Machine Learning"
+            data-department="computer-science"
+            data-semester="5"
+            data-type="exchange"
+            data-rating="4.6"
+            data-reviews="69"
+            data-date="2026-10-10"
+            data-popularity="69">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/machine.jpg"
+                     alt="Hands-On Machine Learning">
+            </div>
+
+            <div class="book-details">
+                <h3>Hands-On Machine Learning</h3>
+                <p class="book-author">Aurelien Geron</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.6</span>
+                    <span class="review-count">(69)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status exchange-status">
+                        <i class="fa-solid fa-arrows-rotate"></i> Exchange
+                    </span>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Book 8 -->
+        <article class="book-card"
+            data-title="Concepts of Physics Vol 1"
+            data-author="H.C. Verma"
+            data-subject="Physics"
+            data-department="physics"
+            data-semester="1"
+            data-type="free"
+            data-rating="4.4"
+            data-reviews="55"
+            data-date="2026-10-05"
+            data-popularity="55">
+
+            <div class="book-cover">
+                <img src="/Explore Categories/books/image/concept.jpg"
+                     alt="Concepts of Physics Volume 1">
+            </div>
+
+            <div class="book-details">
+                <h3>Concepts of Physics Vol. 1</h3>
+                <p class="book-author">H.C. Verma</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.4</span>
+                    <span class="review-count">(55)</span>
+                </div>
+
+                <div class="book-card-footer">
+                    <span class="book-status free-status">
+                        <i class="fa-solid fa-gift"></i> Free
+                    </span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- No results message -->
+    <div class="no-books-found" id="noBooksFound" hidden>
+        <i class="fa-solid fa-book-open"></i>
+        <h3>No books found</h3>
+        <p>Try changing your search or filters.</p>
+    </div>
+
+</section>
+
+    </section>
+
+</main>
+
+<!-- ========================================
+     STUDENTSHARE FOOTER
+======================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+
+            <a href="#" class="footer-logo">
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>Student<span class="footer-gold">Share</span></span>
+            </a>
+
+            <p class="footer-tagline">
+                Empowering students to learn, share and grow together.
+            </p>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-copyright">
+                © 2026 StudentShare. All rights reserved.
+            </p>
+
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#about">Mission</a></li>
+                <li><a href="#community">Team</a></li>
+                <li><a href="#community">Careers</a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#categories">Resources</a></li>
+                <li><a href="#physical-exchange">Exchange</a></li>
+                <li><a href="#community">Grow</a></li>
+                <li><a href="#popular-resources">Popular Resources</a></li>
+            </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-column">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#papers">Previous Year Papers</a></li>
+                <li><a href="#guides">Study Guides</a></li>
+                <li><a href="#categories">View All</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#help">Help Center</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#guidelines">Community Guidelines</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <h3>Social Media</h3>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+
+                <a href="https://x.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span>X / Twitter</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer Line -->
+    <div class="footer-bottom">
+        <p>Made with <i class="fa-solid fa-heart"></i> for students, by students.</p>
+    </div>
+
+</footer>
+
+
+
+
+    <script src="/Explore Categories/header.js"></script>
+    <script src="book.js"></script>
+
+</body>
+</html>

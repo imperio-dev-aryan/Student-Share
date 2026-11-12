@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentShare | Academic Resource Exchange</title>
+    <link rel="icon" type="image.PNG" href="/Designer (2).png">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="popular.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <!-- Sidebar Toggle -->
+        <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidebar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Website Branding -->
+        <a href="/index.html" class="brand">
+            <i class="fa-solid fa-book-open logo-icon"></i>
+
+            <div class="brand-text">
+                <h1>Student<span>Share</span></h1>
+                <p>Resources <b>·</b> Exchange <b>·</b> Grow</p>
+            </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="search-bar" id="searchForm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search for books, notes, subjects, or resources..."
+                aria-label="Search academic resources"
+            >
+
+            <button type="submit" aria-label="Submit search">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <!-- User Controls -->
+        <div class="user-controls">
+
+            <button class="notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot"></span>
+            </button>
+
+            <button class="profile-btn" id="profileBtn"
+                    aria-expanded="false">
+                <span class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span class="profile-name">Student</span>
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu" hidden>
+                <a href="#"><i class="fa-regular fa-user"></i> My Profile</a>
+                <a href="#"><i class="fa-solid fa-book"></i> My Resources</a>
+                <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            </div>
+
+        </div>
+    </header>
+
+ 
+
+<!-- Navigation Sidebar -->
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+
+    <div class="sidebar-background"></div>
+
+    <div class="sidebar-content">
+
+        <div class="sidebar-top">
+            <span class="sidebar-label">NAVIGATION</span>
+
+            <button class="sidebar-close" id="sidebarClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/index.html" class="sidebar-link active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#categories" class="sidebar-link">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Explore Categories</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">RESOURCES</span>
+
+            <a href="/Explore Categories/books/books.html" class="sidebar-link">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Books</span>
+            </a>
+
+            <a href="/Explore Categories/notes/notes.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Notes</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/page.html" class="sidebar-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Study Guides, Lab Manuals, Subjects</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/manuals.html" class="sidebar-link">
+                <i class="fa-solid fa-flask"></i>
+                <span>Other Resources</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/subjects.html" class="sidebar-link">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Projects</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">COMMUNITY</span>
+
+            <a href="#popular-resources" class="sidebar-link">
+                <i class="fa-solid fa-fire"></i>
+                <span>Popular Resources</span>
+            </a>
+
+            <a href="#physical-exchange" class="sidebar-link">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Exchange Resources</span>
+            </a>
+
+            <a href="#community" class="sidebar-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-book-open"></i>
+
+            <div>
+                <h3>Student<span>Share</span></h3>
+                <p>Resources · Exchange · Grow</p>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+    
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-eyebrow">
+                LOVELY PROFESSIONAL UNIVERSITY
+            </p>
+
+            <h2>
+                Find &amp; Share Study Resources
+                <span>All in One Place</span>
+            </h2>
+
+            <p class="hero-description">
+                Access books, notes, previous year papers, guides and more.
+                <br class="desktop-break">
+                Exchange resources, help fellow students and grow together!
+            </p>
+
+            <!-- Hero Search -->
+            <form class="hero-search" id="heroSearchForm">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="heroSearchInput"
+                    placeholder="Search for books, notes, subjects, or resources..."
+                    aria-label="Search study resources"
+                >
+
+                <button type="submit" aria-label="Search">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <!-- Popular Search Tags -->
+            <div class="popular-searches">
+
+                <span class="popular-label">Popular Searches:</span>
+
+                <button type="button" class="search-chip"
+                        data-query="Data Structures">
+                    Data Structures
+                </button>
+
+                <button type="button" class="search-chip"
+                        data-query="Python">
+                    Python
+                </button>
+
+                <button type="button" class="search-chip"
+                        data-query="Engineering Maths">
+                    Engineering Maths
+                </button>
+
+                <button type="button" class="search-chip"
+                        data-query="DBMS">
+                    DBMS
+                </button>
+
+                <button type="button" class="search-chip"
+                        data-query="Physics">
+                    Physics
+                </button>
+
+                <button type="button" class="search-chip"
+                        data-query="Notes">
+                    Notes
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-slogan" aria-hidden="true">
+            Learn<br>
+            Share<br>
+            Grow
+        </div>
+
+    </section>
+
+    
+<!-- Explore Categories Section -->
+<section class="categories-section" id="categories">
+
+    <div class="section-heading">
+        <div class="heading-left">
+            <div class="heading-icon">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+
+            <div>
+                <h2>Explore Categories</h2>
+                <p>Find exactly what you need, when you need it.</p>
+            </div>
+        </div>
+
+        <a href="#categories" class="view-all">
+            View All <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="category-grid">
+
+        <a href="/Explore Categories/books/books.html" class="category-card category-books">
+            <div class="category-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <h3>Books</h3>
+            <p>Textbooks &amp; References</p>
+        </a>
+
+        <a href="/Explore Categories/notes/notes.html" class="category-card category-notes">
+            <div class="category-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <h3>Notes</h3>
+            <p>Class Notes &amp; Summaries</p>
+        </a>
+
+        <a href="/Explore Categories/guides manuals subjects/page.html" class="category-card category-guides">
+            <div class="category-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Study Guides</h3>
+            <p>Concepts &amp; Quick Revision</p>
+        </a>
+
+        <a href="#projects" class="category-card category-projects" id="projects">
+            <div class="category-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Projects</h3>
+            <p>Mini &amp; Major Projects</p>
+        </a>
+
+        <a href="#other-resources"
+           class="category-card category-other" id="other_resources">
+            <div class="category-icon">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <h3>Other Resources</h3>
+            <p>Tools, Links &amp; More</p>
+        </a>
+
+        <a href="/Explore Categories/guides manuals subjects/manuals.html"
+           class="category-card category-labs">
+            <div class="category-icon">
+                <i class="fa-solid fa-flask"></i>
+            </div>
+            <h3>Lab Manuals</h3>
+            <p>Experiment Guides</p>
+        </a>
+
+        <a href="/Explore Categories/guides manuals subjects/subjects.html" class="category-card category-subjects">
+            <div class="category-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>Subjects</h3>
+            <p>All Departments</p>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- Popular Resources Section -->
+<section class="popular-section" id="popular-resources">
+
+    <div class="popular-header">
+        <div class="popular-title">
+            <i class="fa-solid fa-crown"></i>
+            <h2>Popular Resources</h2>
+        </div>
+
+        <a href="#popular-resources" class="popular-view-all">
+            View All <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="popular-carousel-wrapper">
+
+        <button class="carousel-arrow carousel-prev"
+                id="popularPrev"
+                aria-label="Previous resources">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="popular-carousel" id="popularCarousel">
+
+            <!-- Resource 1 -->
+            <article class="popular-card">
+                <div class="popular-cover">
+                    <img src="/books/abc murder.jpeg"
+                         alt="Let Us C textbook cover">
+                </div>
+
+                <div class="popular-info">
+                    <h3>ABC Murders</h3>
+                    <p class="resource-type">Book</p>
+
+                    <div class="resource-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6 (342)</span>
+                    </div>
+
+                    <a href="/book/abcmurders.html">
+                    <span style="background-color: red;" class="resource-status status-free">Purchase</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Resource 2 -->
+            <article class="popular-card">
+                <div class="popular-cover">
+                    <img src="/books/python notes.jpeg"
+                         alt="Physics handwritten notes cover">
+                </div>
+
+                <div class="popular-info">
+                    <h3>Python Handwritten Notes</h3>
+                    <p class="resource-type">Notes</p>
+
+                    <div class="resource-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.8 (277)</span>
+                    </div>
+
+                    <a href="/book/python-notes.html">
+                    <span class="resource-status status-free">Free</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Resource 3 -->
+            <article class="popular-card">
+                <div class="popular-cover">
+                    <img src="/books/java.jpeg"
+                         alt="Java programming textbook cover">
+                </div>
+
+                <div class="popular-info">
+                    <h3>Java Programming</h3>
+                    <p class="resource-type">Book</p>
+
+                    <div class="resource-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.4 (198)</span>
+                    </div>
+
+                    <a href="/book/java-programming.html">
+                    <span class="resource-status status-exchange">Exchange</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Resource 4 -->
+            <article class="popular-card">
+                <div class="popular-cover">
+                    <img src="/books/machine learning.jpeg"
+                         alt="Machine learning notes cover">
+                </div>
+
+                <div class="popular-info">
+                    <h3>Machine Learning</h3>
+                    <p class="resource-type">Notes</p>
+
+                    <div class="resource-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.7 (156)</span>
+                    </div>
+
+                    <a href="/book/machine-learning.html">
+                    <span class="resource-status status-free">Free</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Resource 5 -->
+            <article class="popular-card">
+                <div class="popular-cover">
+                    <img src="/books/buisness studies.jpeg"
+                         alt="Business studies textbook cover">
+                </div>
+
+                <div class="popular-info">
+                    <h3>Business Studies</h3>
+                    <p class="resource-type">Book</p>
+
+                    <div class="resource-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.3 (142)</span>
+                    </div>
+
+                    <a href="/book/business-studies.html">
+                    <span class="resource-status status-exchange">Exchange</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Resource 6 -->
+            <article class="popular-card">
+                <div class="popular-cover">
+                    <img src="/books/c programming.jpeg"
+                         alt="Engineering mathematics textbook cover">
+                </div>
+
+                <div class="popular-info">
+                    <h3>C Programming</h3>
+                    <p class="resource-type">Book</p>
+
+                    <div class="resource-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6 (168)</span>
+                    </div>
+
+                    <a href="/book/c-programming.html">
+                    <span style="background-color: red;" class="resource-status status-free">Purchase</span>
+                    </a>
+                </div>
+            </article>
+
+            
+
+        </div>
+
+        <button class="carousel-arrow carousel-next"
+                id="popularNext"
+                aria-label="Next resources">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- Exchange & Community Banners -->
+<section class="promo-section">
+
+    <!-- Physical Exchange Banner -->
+    <article class="promo-card exchange-promo">
+
+        <div class="promo-content">
+            <span class="promo-eyebrow">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                GIVE A BOOK, GAIN KNOWLEDGE
+            </span>
+
+            <h2>
+                Exchange Resources,<br>
+                <span>Build Connections</span>
+            </h2>
+
+            <p>
+                Have books you no longer need? Exchange them with
+                fellow students and discover your next great resource.
+            </p>
+
+            <a href="#physical-exchange" class="promo-btn">
+                Start Exchanging
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="promo-illustration exchange-illustration"
+             aria-hidden="true">
+            <i class="fa-solid fa-book-open"></i>
+            <i class="fa-solid fa-arrows-rotate exchange-symbol"></i>
+        </div>
+
+    </article>
+
+    <!-- Digital Community Banner -->
+    <article class="promo-card community-promo">
+
+        <div class="promo-content">
+            <span class="promo-eyebrow">
+                <i class="fa-solid fa-users"></i>
+                LEARN TOGETHER
+            </span>
+
+            <h2>
+                Join Our Student<br>
+                <span>Community</span>
+            </h2>
+
+            <p>
+                Share your notes, upload study guides, and help
+                other students succeed while learning together.
+            </p>
+
+            <a href="#digital-resources" class="promo-btn" id="promoBtn">
+                Share Resources
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="promo-illustration community-illustration"
+             aria-hidden="true">
+            <i class="fa-solid fa-user-graduate"></i>
+            <i class="fa-solid fa-users community-symbol"></i>
+        </div>
+
+    </article>
+
+</section>
+
+</main>
+
+
+<!-- ========================================
+     STUDENTSHARE FOOTER
+======================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+
+            <a href="#" class="footer-logo">
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>Student<span class="footer-gold">Share</span></span>
+            </a>
+
+            <p class="footer-tagline">
+                Empowering students to learn, share and grow together.
+            </p>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-copyright">
+                © 2026 StudentShare. All rights reserved.
+            </p>
+
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#about">Mission</a></li>
+                <li><a href="#community">Team</a></li>
+                <li><a href="#community">Careers</a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#categories">Resources</a></li>
+                <li><a href="#physical-exchange">Exchange</a></li>
+                <li><a href="#community">Grow</a></li>
+                <li><a href="#popular-resources">Popular Resources</a></li>
+            </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-column">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="/Explore Categories/books/books.html">Books</a></li>
+                <li><a href="/Explore Categories/notes/notes.html">Notes</a></li>
+                <li><a href="/Explore Categories/guides manuals subjects/manuals.html">Lab Manuals</a></li>
+                <li><a href="/Explore Categories/guides manuals subjects/guides.js">Study Guides</a></li>
+                <li><a href="#categories">View All</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#help">Help Center</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#guidelines">Community Guidelines</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <h3>Social Media</h3>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://www.linkedin.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+
+                <a href="https://x.com/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span>X / Twitter</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer Line -->
+    <div class="footer-bottom">
+        <p>Made with <i class="fa-solid fa-heart"></i> for students, by students.</p>
+    </div>
+
+</footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

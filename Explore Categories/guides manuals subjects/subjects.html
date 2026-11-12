@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subjects | StudentShare</title>
+
+    <link rel="stylesheet" href="page.css">
+    <link rel="icon" type="image.PNG" href="/Designer (2).png">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="icon" type="image.PNG" href="/Designer (2).png">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <!-- Sidebar Toggle -->
+        <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidebar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Website Branding -->
+        <a href="/index.html" class="brand">
+            <i class="fa-solid fa-book-open logo-icon"></i>
+
+            <div class="brand-text">
+                <h1>Student<span>Share</span></h1>
+                <p>Resources <b>·</b> Exchange <b>·</b> Grow</p>
+            </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="search-bar" id="searchForm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search for books, notes, subjects, or resources..."
+                aria-label="Search academic resources"
+            >
+
+            <button type="submit" aria-label="Submit search">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <!-- User Controls -->
+        <div class="user-controls">
+
+            <button class="notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot"></span>
+            </button>
+
+            <button class="profile-btn" id="profileBtn"
+                    aria-expanded="false">
+                <span class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span class="profile-name">Student</span>
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu" hidden>
+                <a href="#"><i class="fa-regular fa-user"></i> My Profile</a>
+                <a href="#"><i class="fa-solid fa-book"></i> My Resources</a>
+                <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+            </div>
+
+        </div>
+    </header>
+
+ 
+
+<!-- Navigation Sidebar -->
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+
+    <div class="sidebar-background"></div>
+
+    <div class="sidebar-content">
+
+        <div class="sidebar-top">
+            <span class="sidebar-label">NAVIGATION</span>
+
+            <button class="sidebar-close" id="sidebarClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/index.html" class="sidebar-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#categories" class="sidebar-link">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Explore Categories</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">RESOURCES</span>
+
+            <a href="/Explore Categories/books/books.html" class="sidebar-link">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Books</span>
+            </a>
+
+            <a href="/Explore Categories/notes/notes.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Notes</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/page.html" class="sidebar-link active">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Study Guides, Lab Manuals, Subjects</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/manuals.html" class="sidebar-link">
+                <i class="fa-solid fa-flask"></i>
+                <span>Other Resources</span>
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/subjects.html" class="sidebar-link">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Projects</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-label">COMMUNITY</span>
+
+            <a href="#popular-resources" class="sidebar-link">
+                <i class="fa-solid fa-fire"></i>
+                <span>Popular Resources</span>
+            </a>
+
+            <a href="#physical-exchange" class="sidebar-link">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Exchange Resources</span>
+            </a>
+
+            <a href="#community" class="sidebar-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Community</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-book-open"></i>
+
+            <div>
+                <h3>Student<span>Share</span></h3>
+                <p>Resources · Exchange · Grow</p>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+
+    <!-- PAGE HEADER -->
+    <section class="resources-page-header">
+
+        <div class="resources-heading-icons">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span class="heading-separator">•</span>
+            <i class="fa-solid fa-flask"></i>
+            <span class="heading-separator">•</span>
+            <i class="fa-solid fa-circle-nodes"></i>
+        </div>
+
+        <h1>
+            Study Guides
+            <span>•</span>
+            Lab Manuals
+            <span>•</span>
+            Subjects
+        </h1>
+
+        <nav class="resources-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Guides &amp; Subjects</span>
+        </nav>
+
+        <!-- CATEGORY TABS -->
+        <nav class="resources-category-tabs"
+             aria-label="Resource categories">
+
+            <a href="/Explore Categories/guides manuals subjects/page.html" class="resource-tab">
+                Study Guides
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/manuals.html" class="resource-tab">
+                Lab Manuals
+            </a>
+
+            <a href="/Explore Categories/guides manuals subjects/subjects.html"
+               class="resource-tab active">
+                Subjects
+            </a>
+
+        </nav>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="resources-main-layout">
+
+        <!-- FILTER SIDEBAR -->
+        <aside class="resources-filter-sidebar">
+
+            <!-- Search -->
+            <div class="resources-filter-group">
+
+                <h3>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </h3>
+
+                <div class="resources-search-box">
+                    <input
+                        type="search"
+                        id="subjectSearch"
+                        placeholder="Search subjects..."
+                    >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+
+            <!-- Department -->
+            <div class="resources-filter-group">
+
+                <h3>
+                    <i class="fa-solid fa-landmark"></i>
+                    Department
+                </h3>
+
+                <select id="subjectDepartment"
+                        class="resources-select">
+
+                    <option value="all">All Departments</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="mechanical">Mechanical Engineering</option>
+                    <option value="electrical">Electrical Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Semester -->
+            <div class="resources-filter-group">
+
+                <h3>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Semester
+                </h3>
+
+                <select id="subjectSemester"
+                        class="resources-select">
+
+                    <option value="all">All Semesters</option>
+                    <option value="1">1st Semester</option>
+                    <option value="2">2nd Semester</option>
+                    <option value="3">3rd Semester</option>
+                    <option value="4">4th Semester</option>
+                    <option value="5">5th Semester</option>
+                    <option value="6">6th Semester</option>
+                    <option value="7">7th Semester</option>
+                    <option value="8">8th Semester</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Subject Type -->
+            <div class="resources-filter-group">
+
+                <h3>
+                    <i class="fa-solid fa-layer-group"></i>
+                    Subject Type
+                </h3>
+
+                <div class="guide-type-options">
+
+                    <button type="button"
+                            class="guide-type-btn"
+                            data-type="core"
+                            aria-pressed="true">
+                        <i class="fa-solid fa-check"></i>
+                        Core
+                    </button>
+
+                    <button type="button"
+                            class="guide-type-btn"
+                            data-type="elective"
+                            aria-pressed="false">
+                        Elective
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Reset -->
+            <div id="reset">
+                <div>Reset Filter</div>
+            </div>
+
+        </aside>
+
+
+        <!-- SUBJECT RESULTS -->
+        <section class="guides-results-area">
+
+            <div class="guides-results-header">
+
+                <p>
+                    <span id="subjectsCount">8</span>
+                    Subjects
+                </p>
+
+                <select id="subjectsSort"
+                        class="resources-select sort-select">
+
+                    <option value="popular">Most Resources</option>
+                    <option value="name">Name: A to Z</option>
+                    <option value="semester">Semester</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SUBJECT CARDS -->
+            <div class="guides-grid" id="subjectsGrid">
+
+
+                <!-- Subject 1 -->
+                <article class="guide-card"
+                    data-title="Programming Fundamentals"
+                    data-department="computer-science"
+                    data-semester="1"
+                    data-type="core"
+                    data-resources="125">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/computer science.png"
+                        alt="Programming Fundamentals">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Programming Fundamentals</h3>
+
+                        <p>Computer Science <span>•</span> Sem 1</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                125 Resources
+                            </span>
+
+                            <span class="guide-status free">Core</span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- Subject 2 -->
+                <article class="guide-card"
+                    data-title="Engineering Physics"
+                    data-department="physics"
+                    data-semester="1"
+                    data-type="core"
+                    data-resources="98">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/physics.jpeg"
+                            alt="Engineering Physics">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Engineering Physics</h3>
+
+                        <p>Physics <span>•</span> Sem 1</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                98 Resources
+                            </span>
+
+                            <span class="guide-status free">Core</span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- Subject 3 -->
+                <article class="guide-card"
+                    data-title="Engineering Chemistry"
+                    data-department="chemistry"
+                    data-semester="1"
+                    data-type="core"
+                    data-resources="87">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/chemistry.png"
+                        alt="Engineering Chemistry">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Engineering Chemistry</h3>
+
+                        <p>Chemistry <span>•</span> Sem 1</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                87 Resources
+                            </span>
+
+                            <span class="guide-status free">Core</span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- Subject 4 -->
+                <article class="guide-card"
+                    data-title="Basic Electrical Engineering"
+                    data-department="electrical"
+                    data-semester="2"
+                    data-type="core"
+                    data-resources="112">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/electrical engineering.png"
+                        alt="Basic Electrical Engineering">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Basic Electrical Engineering</h3>
+
+                        <p>Electrical Engineering <span>•</span> Sem 2</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                112 Resources
+                            </span>
+
+                            <span class="guide-status free">Core</span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- Subject 5 -->
+                <article class="guide-card"
+                    data-title="Engineering Graphics"
+                    data-department="mechanical"
+                    data-semester="1"
+                    data-type="core"
+                    data-resources="76">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/engineering grahics.png"
+                        alt="Engineering Graphics">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Engineering Graphics</h3>
+
+                        <p>Mechanical Engineering <span>•</span> Sem 1</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                76 Resources
+                            </span>
+
+                            <span class="guide-status free">Core</span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- Subject 6 -->
+                <article class="guide-card"
+                    data-title="Digital Electronics"
+                    data-department="electronics"
+                    data-semester="3"
+                    data-type="elective"
+                    data-resources="143">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/electronics.png"
+                        alt="Digital Electronics">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Digital Electronics</h3>
+
+                        <p>Electronics <span>•</span> Sem 3</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                143 Resources
+                            </span>
+
+                            <span class="guide-status exchange">
+                                Elective
+                            </span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- Subject 7 -->
+                <article class="guide-card"
+                    data-title="Data Structures"
+                    data-department="computer-science"
+                    data-semester="3"
+                    data-type="core"
+                    data-resources="105">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/computer engineering.png"
+                        alt="Data Structures">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Data Structures</h3>
+
+                        <p>Computer Science <span>•</span> Sem 3</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                105 Resources
+                            </span>
+
+                            <span class="guide-status free">Core</span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- Subject 8 -->
+                <article class="guide-card"
+                    data-title="Workshop Practice"
+                    data-department="mechanical"
+                    data-semester="2"
+                    data-type="elective"
+                    data-resources="69">
+
+                    <div class="guide-cover">
+                        <img src="/Explore Categories/guides manuals subjects/images/subjects/workshop.jpeg"
+                        alt="Workshop Practice">
+                    </div>
+
+                    <div class="guide-card-details">
+
+                        <h3>Workshop Practice</h3>
+
+                        <p>Mechanical Engineering <span>•</span> Sem 2</p>
+
+                        <div class="guide-card-footer">
+
+                            <span>
+                                <i class="fa-solid fa-folder-open"></i>
+                                69 Resources
+                            </span>
+
+                            <span class="guide-status exchange">
+                                Elective
+                            </span>
+
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div class="guides-empty" id="subjectsEmpty" hidden>
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <h3>No Subjects Found</h3>
+
+                <p>
+                    Try changing your search or filter options.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand">
+                    <i class="fa-solid fa-book-open logo-icon"></i>
+
+                    <div class="brand-text">
+                        <h1>Student<span>Share</span></h1>
+                        <p>Resources <b>·</b> Exchange <b>·</b> Grow</p>
+                    </div>
+                </a>
+
+                <p>
+                    A student-driven platform to share academic
+                    resources, exchange knowledge, and grow together.
+                </p>
+
+                <p class="copyright">
+                    © 2026 StudentShare. All rights reserved.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#about">Mission</a></li>
+                    <li><a href="#community">Team</a></li>
+                    <li><a href="#community">Careers</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#categories">Resources</a></li>
+                    <li><a href="#physical-exchange">Exchange</a></li>
+                    <li><a href="#community">Grow</a></li>
+                    <li><a href="#popular-resources">Popular Resources</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#notes">Notes</a></li>
+                    <li><a href="#papers">Previous Year Papers</a></li>
+                    <li><a href="study-guides.html">Study Guides</a></li>
+                    <li><a href="lab-manuals.html">Lab Manuals</a></li>
+                    <li><a href="subjects.html">Subjects</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#guidelines">Community Guidelines</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-social">
+
+                <h3>Social Media</h3>
+
+                <div class="social-links">
+
+                    <a href="https://www.instagram.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://www.youtube.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+
+                    <a href="https://x.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span>X / Twitter</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>
+                Made with
+                <i class="fa-solid fa-heart"></i>
+                for students, by students.
+            </p>
+        </div>
+
+    </footer>
+    <script src="/Explore Categories/header.js"></script>
+    <script src="subjects.js"></script>
+
+</body>
+</html>

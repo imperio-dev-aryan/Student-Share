@@ -1,0 +1,304 @@
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    min-height: 290px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    /* Replace this image with an LPU campus-at-sunset
+       photograph when you have the preferred asset. */
+    background-image:
+        url(Gemini_Generated_Image_854iwg854iwg854i.png);
+
+    background-size: cover;
+    background-position: center 48%;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #253746;
+}
+
+/* Dark overlay improves text readability */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(3, 12, 20, 0.96) 0%,
+        rgba(3, 12, 20, 0.86) 36%,
+        rgba(3, 12, 20, 0.43) 66%,
+        rgba(3, 12, 20, 0.15) 100%
+    );
+}
+
+/* Main hero content */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(720px, 68%);
+    padding: 32px 0 30px 5%;
+}
+
+.hero-eyebrow {
+    color: #f1f3f5;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.hero-content h2 {
+    color: #f7f8fb;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.08;
+    font-weight: 700;
+    max-width: 650px;
+}
+
+.hero-content h2 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero-description {
+    color: #edf0f4;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 9px;
+    margin-bottom: 12px;
+}
+
+/* Hero search field */
+
+.hero-search {
+    width: min(640px, 100%);
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 5px 6px 5px 17px;
+
+    border: 1px solid #dba64d;
+    border-radius: 28px;
+    background: rgba(7, 19, 30, 0.94);
+
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.2);
+}
+
+.hero-search > i {
+    color: var(--gold);
+    font-size: 17px;
+}
+
+.hero-search input {
+    flex: 1;
+    min-width: 0;
+    height: 34px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: var(--white);
+    font-size: 12px;
+}
+
+.hero-search input::placeholder {
+    color: #c5ced9;
+}
+
+.hero-search input:focus-visible {
+    outline: 1px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.hero-search button {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border: none;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #101720;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: transform 0.2s, background 0.2s;
+}
+
+.hero-search button:hover {
+    background: #ffda9c;
+    transform: translateX(2px);
+}
+
+/* Popular search chips */
+
+.popular-searches {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.popular-label {
+    color: #e5e9ef;
+    font-size: 11px;
+    margin-right: 3px;
+}
+
+.search-chip {
+    border: 1px solid #263746;
+    border-radius: 18px;
+    padding: 6px 12px;
+
+    background: rgba(22, 37, 52, 0.92);
+    color: #e4eaf1;
+
+    font-size: 10px;
+    cursor: pointer;
+
+    transition: border-color 0.2s,
+                background 0.2s,
+                color 0.2s;
+}
+
+.search-chip:hover,
+.search-chip:focus-visible {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: #203044;
+}
+
+/* Decorative slogan on the right */
+
+.hero-slogan {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 5%;
+
+    color: #fff4df;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 2vw, 28px);
+    font-style: italic;
+    line-height: 1.25;
+    text-align: center;
+
+    transform: rotate(-8deg);
+    text-shadow: 0 2px 10px #000;
+}
+
+/* ========================================
+   HERO RESPONSIVENESS
+======================================== */
+
+@media (min-width: 1500px) {
+    .hero {
+        min-height: 330px;
+    }
+
+    .hero-content {
+        padding-top: 38px;
+        padding-bottom: 38px;
+    }
+}
+
+@media (max-width: 850px) {
+    .hero {
+        min-height: 310px;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 80%;
+        padding-left: 4%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-slogan {
+        right: 3%;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero {
+        min-height: 0;
+        background-position: 58% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(3, 12, 20, 0.94),
+            rgba(3, 12, 20, 0.77)
+        );
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 35px 18px 26px;
+    }
+
+    .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(27px, 7vw, 34px);
+        line-height: 1.13;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .hero-search {
+        gap: 10px;
+        padding-left: 13px;
+    }
+
+    .hero-search input {
+        font-size: 11px;
+    }
+
+    .popular-searches {
+        gap: 7px;
+    }
+
+    .popular-label {
+        flex-basis: 100%;
+        margin-bottom: 2px;
+    }
+
+    .search-chip {
+        padding: 7px 10px;
+    }
+
+    .hero-slogan {
+        display: none;
+    }
+}

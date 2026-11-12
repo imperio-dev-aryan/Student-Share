@@ -1,0 +1,280 @@
+
+/* ========================================
+   PROMOTIONAL BANNERS
+======================================== */
+
+.promo-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+
+
+    margin: 30px 1.4%;
+}
+
+/* Shared banner styles */
+
+.promo-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+
+    padding: 22px 24px;
+
+    border: 1px solid #2b3b4b;
+    border-radius: 13px;
+
+    background: #101e2a;
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+    max-width: 75%;
+}
+
+.promo-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+
+    margin-bottom: 9px;
+}
+
+.promo-card h2 {
+    color: #f5f7fa;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 2vw, 27px);
+    line-height: 1.15;
+}
+
+.promo-card h2 span {
+    color: var(--gold);
+}
+
+.promo-card p {
+    max-width: 340px;
+    color: #c1cbd6;
+    font-size: 11px;
+    line-height: 1.7;
+    margin-top: 9px;
+}
+
+/* Call-to-action buttons */
+
+.promo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 14px;
+    padding: 10px 15px;
+
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+
+    background: var(--gold);
+    color: #101720;
+
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.promo-btn:hover {
+    background: #ffdaa0;
+    transform: translateY(-2px);
+}
+
+/* Physical exchange banner */
+
+.exchange-promo {
+    background:
+        radial-gradient(
+            ellipse at 100% 50%,
+            #34503d 0%,
+            transparent 52%
+        ),
+        linear-gradient(120deg, #152c29, #101d27);
+}
+
+.exchange-promo::after,
+.community-promo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        transparent 45%,
+        rgba(5, 13, 20, 0.15)
+    );
+}
+
+.exchange-promo .promo-btn {
+    border-color: #a7e6b8;
+    background: #a7e6b8;
+}
+
+/* Digital community banner */
+
+.community-promo {
+    background:
+        radial-gradient(
+            ellipse at 100% 50%,
+            #423661 0%,
+            transparent 52%
+        ),
+        linear-gradient(120deg, #24243b, #111c29);
+}
+
+.community-promo .promo-btn {
+    border-color: #d5b7ff;
+    background: #d5b7ff;
+}
+
+/* Decorative illustrations */
+
+.promo-illustration {
+    position: absolute;
+    z-index: 1;
+    right: 5%;
+    top: 50%;
+
+    width: 105px;
+    height: 105px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+.exchange-illustration {
+    background: rgba(144, 208, 157, 0.1);
+    border: 1px solid rgba(167, 230, 184, 0.25);
+    color: #a7e6b8;
+}
+
+.exchange-illustration > .fa-book-open {
+    font-size: 48px;
+}
+
+.exchange-symbol {
+    position: absolute;
+    right: -4px;
+    bottom: 3px;
+
+    padding: 9px;
+    border: 1px solid #315b43;
+    border-radius: 50%;
+
+    background: #19352b;
+    font-size: 17px;
+}
+
+.community-illustration {
+    background: rgba(184, 153, 255, 0.1);
+    border: 1px solid rgba(213, 183, 255, 0.25);
+    color: #d5b7ff;
+}
+
+.community-illustration > .fa-user-graduate {
+    font-size: 48px;
+}
+
+.community-symbol {
+    position: absolute;
+    right: -4px;
+    bottom: 3px;
+
+    padding: 9px;
+    border: 1px solid #574477;
+    border-radius: 50%;
+
+    background: #2b2441;
+    font-size: 17px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 850px) {
+    .promo-section {
+        gap: 10px;
+    }
+
+    .promo-card {
+        padding: 18px;
+        min-height: 190px;
+    }
+
+    .promo-content {
+        max-width: 82%;
+    }
+
+    .promo-card h2 {
+        font-size: 21px;
+    }
+
+    .promo-illustration {
+        right: 2%;
+        width: 75px;
+        height: 75px;
+        opacity: 0.65;
+    }
+
+    .exchange-illustration > .fa-book-open,
+    .community-illustration > .fa-user-graduate {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 560px) {
+    .promo-section {
+        grid-template-columns: 1fr;
+        margin: 10px;
+        gap: 12px;
+    }
+
+    .promo-card {
+        min-height: 190px;
+        padding: 20px 17px;
+    }
+
+    .promo-content {
+        max-width: 82%;
+    }
+
+    .promo-card h2 {
+        font-size: 23px;
+    }
+
+    .promo-card p {
+        font-size: 11px;
+    }
+
+    .promo-illustration {
+        right: 2%;
+        width: 70px;
+        height: 70px;
+        opacity: 0.5;
+    }
+}
